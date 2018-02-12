@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <ctype.h>
+#include <math.h>
 
 using namespace std;
 
