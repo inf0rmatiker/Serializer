@@ -75,17 +75,10 @@ vector<int> handleNumber(long number){
     // Push tag
     myVector.push_back(tag);
     
-	// Number of additional bytes needed
-	int additionalBytes = 0;
-		while (true){
-			long x = (8*additionalBytes)+4;
-			if ( x >= minBits){
-				break;
-			}
-			additionalBytes++;
-		}
-    
-	int bitPlaces = 8*additionalBytes;
+    // Number of additional bytes needed
+    int additionalBytes = ceil((minBits - 4)/8.0);
+
+    int bitPlaces = 8*additionalBytes;
     
     // Push length and leftmost 4 bits
 	myVector.push_back((additionalBytes << 4) + ((number >> bitPlaces) & 0xf));
