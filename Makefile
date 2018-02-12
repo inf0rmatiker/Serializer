@@ -1,4 +1,4 @@
-# Makefile for HW2
+# Makefile for Serializer
 
 CPPFLAGS=-Wall -Werror -Wextra -Wfatal-errors
 assignment=serializer
