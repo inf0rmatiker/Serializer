@@ -24,4 +24,7 @@ Reads files containing numbers, strings, or characters separated by whitespace. 
   - 'S' for string
   - 'c' for char
   
-  
+- Usage:
+  - Compile and run serializer.cc with either the Makefile provided (Linux/g++ users) or make your own makefile to compile it.
+  - Once object file has been made, run as ./serializer <file_1> <file_2> ... <file_n> to read from file_1 through file_n.
+  - Enjoy
