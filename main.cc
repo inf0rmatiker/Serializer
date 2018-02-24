@@ -11,7 +11,7 @@ using namespace std;
 int main (int argc, char *argv[]) {
     
     int option, sflag = 0, uflag = 0, vflag = 0;
-    string usageMessage = "Usage: " + string(argv[0]) + " -options <file_1> <file_2> ... <file_n>\n" + "Options: -s -u -v\n-s: Serialize\n-u: Unserialize\n-v: Verbose\n";
+    string usageMessage = "Usage: " + string(argv[0]) + " [options] [filename...]\n" + "Options: -s -u -v\n-s: Serialize\n-u: Unserialize\n-v: Verbose\n";
     if (argc <= 1){
         cerr << usageMessage;
         exit(1);
