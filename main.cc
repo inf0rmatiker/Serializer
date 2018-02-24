@@ -53,22 +53,20 @@ int main (int argc, char *argv[]) {
     
 	// SERIALIZE
     if (uflag < 1){
-		Serializer serializer;
+	Serializer serializer;
         for (int i = optind; i < argc; i++){
-			if (vflag > 0) cerr << "Processing file " << argv[i] << '\n';
-            serializer.serializeFile(argv[i]);
+		if (vflag > 0) cerr << "Processing file " << argv[i] << '\n';
+        	serializer.serializeFile(argv[i]);
         }
     }
-	// UNSERIALIZE
-	else {
-		Unserializer unserializer;
-		for (int i = optind; i < argc; i++){
-			if (vflag > 0) cerr << "Processing file " << argv[i] << '\n';
-			unserializer.unserializeFile(argv[i]);
-		}
-	
-
+    // UNSERIALIZE
+    else {
+	Unserializer unserializer;
+	for (int i = optind; i < argc; i++){
+		if (vflag > 0) cerr << "Processing file " << argv[i] << '\n';
+		unserializer.unserializeFile(argv[i]);
 	}
+    }
 
     return 0;
 }
