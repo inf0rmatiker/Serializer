@@ -1,3 +1,9 @@
+/*
+* Author: Caleb Carlson
+* Date: 02/23/2018
+* Email: cacaleb@rams.colostate.edu
+*/
+
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
