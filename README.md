@@ -26,7 +26,7 @@ Reads files containing numbers, strings, booleans, or characters separated by wh
   - 'c' for *char*
   
 - Usage:
-  - Compile and run serializer.cc with either the Makefile provided (Linux/g++ users) or make your own makefile to compile it.
+  - Download serializer.tar and extract. Compile with either the Makefile provided (Linux/g++ users) or make your own makefile to           compile it.
   - Once object file has been made, run as ./serializer [options] [filename...] Example: ./serializer -s -v datafile.txt
   - Options are:
     - *-s* : serialize
