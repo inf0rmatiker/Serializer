@@ -4,8 +4,8 @@ Reads files containing numbers, strings, or characters separated by whitespace. 
 - Numbers input as integers are output as hexidecimal vnums
   - Format of vnum is 8n + 4 bits, where n is the number of additional bytes needed to store the number.
   - First 4 bits of output is unsigned length of additional bytes needed. 
-  - Example 1) input 5 would return 05, as no additional bytes were needed to store the number, and 5 fit into the first 4 bits.
-  - Example 2) input 300 would return 11 2c, as 1 additional byte was needed to store the number, the other 3 nibbles denoting the number.
+  - Example 1) input 5 would return 73 05. 73 is hex for 's', meaning the number was small enough to fit into a short. 05 because 0             additional bytes were needed and 5 fits into the first signed 4 bits.
+  - Example 2) input 4500000 would return 69 30 44 aa 20. 69 for 'i' for int, 3 additional bytes were needed to store the number, the other     bytes denoting the number.
   - Input size restraint is max/min size of signed long int
   
 - Strings are input between double quotes and are output as hexidecimal bytes representing characters and length.
@@ -28,3 +28,9 @@ Reads files containing numbers, strings, or characters separated by whitespace. 
   - Compile and run serializer.cc with either the Makefile provided (Linux/g++ users) or make your own makefile to compile it.
   - Once object file has been made, run as ./serializer <file_1> <file_2> ... <file_n> to read from file_1 through file_n.
   - Enjoy
+
+
+# Unserializer
+
+Reads serialized data and outputs unserialized results, one per line.
+Example 1) 69 30 44 aa 20 -> 4500000
